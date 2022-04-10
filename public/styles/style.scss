@@ -12,10 +12,11 @@
 // CSS Variables for color & font size
 :root {
    --clr-white: #fff;
-   --clr-grey: #e9e9e970;
-   --clr-primary: #10c9c1;
-   --clr-primary-transparent: #10c9c388;
-   --clr-black: #191919;
+   --clr-grey: #e9e9e9;
+   --clr-grey-light: #f8f9f9;
+   --clr-primary: #10c9c3;
+   --clr-black: #1d1d1d;
+   --clr-hover-img: #252525;
    --clr-pink: #f9dfdf;
    --paragraph-clr: #787878;
 }
@@ -32,14 +33,6 @@ body {
    text-transform: capitalize;
    font-size: 2.4rem;
    font-weight: 600;
-}
-
-.bg-grid {
-   background-image: url(../img/pink_grid.png);
-   // background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   // background-clip: border-box;
 }
 
 // -------------------------- Main Design Starts --------------------
@@ -105,7 +98,7 @@ body {
          }
 
          .banner_btn {
-            background: var(--clr-primary-transparent);
+            background: var(--clr-primary);
          }
       }
    } //end of banner_content
@@ -124,7 +117,11 @@ body {
 
 // ----------------------------- Skills Section ------------------------
 .skill_section {
-   background-color: var(--clr-grey);
+   background-image: url(../img/skill_bg.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
    .skill_section_content {
       max-width: 556px;
 
@@ -145,7 +142,7 @@ body {
 
 // ----------------------------- Numbers Section ------------------------
 .numbers_history_section {
-   background: var(--clr-primary-transparent);
+   background: var(--clr-primary);
 
    .numbers {
       display: flex;
@@ -168,6 +165,10 @@ body {
       .work_card {
          width: 100%;
          position: relative !important;
+
+         &:hover {
+            background: var(--clr-hover-img);
+         }
 
          .card_img {
             cursor: pointer;
@@ -228,7 +229,7 @@ body {
          left: 46%;
          width: 90px;
          height: 90px;
-         background: var(--clr-primary-transparent);
+         background: var(--clr-primary);
          display: flex;
          justify-content: center;
          align-items: center;
@@ -270,14 +271,26 @@ body {
 
 // ----------------------------- Services Section ------------------------
 #testimonials {
-   position: relative;
+   .carousel-indicators {
+      margin-bottom: 2rem;
+   }
+   .carousel-indicators [data-bs-target] {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+   }
    .carousel-item {
       img {
-         opacity: 0.6;
+         width: 100%;
       }
 
       .carousel-caption {
-         top: 40% !important;
+         top: 35% !important;
+         padding: 0 10rem;
       }
    }
 } //end of services section
@@ -297,7 +310,7 @@ body {
 
       .form_btn {
          padding: 1rem 3rem;
-         background: var(--clr-primary-transparent);
+         background: var(--clr-primary);
          color: var(--clr-white);
          font-size: 14px;
          font-weight: 600;

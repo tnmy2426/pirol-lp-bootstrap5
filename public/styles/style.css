@@ -10,10 +10,11 @@
 
 :root {
   --clr-white: #fff;
-  --clr-grey: #e9e9e970;
-  --clr-primary: #10c9c1;
-  --clr-primary-transparent: #10c9c388;
-  --clr-black: #191919;
+  --clr-grey: #e9e9e9;
+  --clr-grey-light: #f8f9f9;
+  --clr-primary: #10c9c3;
+  --clr-black: #1d1d1d;
+  --clr-hover-img: #252525;
   --clr-pink: #f9dfdf;
   --paragraph-clr: #787878;
 }
@@ -29,12 +30,6 @@ body {
   text-transform: capitalize;
   font-size: 2.4rem;
   font-weight: 600;
-}
-
-.bg-grid {
-  background-image: url(../img/pink_grid.png);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #header {
@@ -97,7 +92,7 @@ body {
 }
 
 .banner_section .bannner_container .banner_content .banner_btn {
-  background: var(--clr-primary-transparent);
+  background: var(--clr-primary);
 }
 
 #about .about_content {
@@ -111,7 +106,10 @@ body {
 }
 
 .skill_section {
-  background-color: var(--clr-grey);
+  background-image: url(../img/skill_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .skill_section .skill_section_content {
@@ -137,7 +135,7 @@ body {
 }
 
 .numbers_history_section {
-  background: var(--clr-primary-transparent);
+  background: var(--clr-primary);
 }
 
 .numbers_history_section .numbers {
@@ -173,6 +171,10 @@ body {
 #work .row > * .work_card {
   width: 100%;
   position: relative !important;
+}
+
+#work .row > * .work_card:hover {
+  background: var(--clr-hover-img);
 }
 
 #work .row > * .work_card .card_img {
@@ -225,7 +227,7 @@ body {
   left: 46%;
   width: 90px;
   height: 90px;
-  background: var(--clr-primary-transparent);
+  background: var(--clr-primary);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,16 +278,27 @@ body {
   font-size: 16px;
 }
 
-#testimonials {
-  position: relative;
+#testimonials .carousel-indicators {
+  margin-bottom: 2rem;
+}
+
+#testimonials .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 #testimonials .carousel-item img {
-  opacity: 0.6;
+  width: 100%;
 }
 
 #testimonials .carousel-item .carousel-caption {
-  top: 40% !important;
+  top: 35% !important;
+  padding: 0 10rem;
 }
 
 #contact {
@@ -304,7 +317,7 @@ body {
 
 #contact .contact_form .form_btn {
   padding: 1rem 3rem;
-  background: var(--clr-primary-transparent);
+  background: var(--clr-primary);
   color: var(--clr-white);
   font-size: 14px;
   font-weight: 600;
